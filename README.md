@@ -1,11 +1,11 @@
 ## Create virtual environment
-python -m  venv "<virtual environment name>"
+python -m  venv "virtual environment name"
 
 ## Setting execution policy to the current user
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ## Activate the virtual environment
-<virtual environment name>\Scripts\Activate.ps1
+"virtual environment name>\Scripts\Activate.ps1"
 
 ## Upgrade pip
 python -m pip install --upgrade pip
@@ -14,7 +14,7 @@ python -m pip install --upgrade pip
 pip install Django
 
 ## Creating Blank Django Project. 
-django-admin startproject <project name> . 
+django-admin startproject "project name" . 
 
 ## __init__.py in the project folder
 __init__.py shows that the folder's files which are part of a Python package. We can't install files from another folder without this file.
@@ -42,6 +42,13 @@ python manage.py runserver
 Django uses apps and projects to keep code clean and easy and read. Multiple apps can be part of same Django project.
 Each app will have a set of functions to control. For example, an e-commerce site, you may use on app to login users, another to handle payments, and another to list item details. That's three different apps that are all part of the same main project.
 
-command - python manage.py startapp <app name>
+command - python manage.py startapp "app name"
+
+## File structure in the created app folder
+admin.py is a file that tells the Django Admin app how to work.
+apps.py is a file that tells the app how to work and migrations/ keeps track of changes to our models.py file. So, that it stays in sync with the models in our database
+models.py is where our database models are written and Django automatically turns them into database tables and tests.
+test.py is for testing views in an app.
+views.py is where we handle the logic for our web app's requests and responses.
 
 

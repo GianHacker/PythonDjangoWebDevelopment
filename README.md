@@ -1,5 +1,5 @@
 ## Create virtual environment
-python -m  venv <virtual environment name>
+python -m  venv "<virtual environment name>"
 
 ## Setting execution policy to the current user
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -17,7 +17,7 @@ pip install Django
 django-admin startproject <project name> . 
 
 ## __init__.py in the project folder
-__init__.py shows folder's files are part of a Python package. We can't install files from another folder without this file.
+__init__.py shows that the folder's files which are part of a Python package. We can't install files from another folder without this file.
 
 ## asgi.py in the project folder
 asgi.py offers the option of running an Asynchronous Server Gateway Interface.
@@ -37,5 +37,11 @@ The manage.py file is not a core component of the Django project, but it is used
 - Below command is used to run the server 
 python manage.py runserver
 - Once that runs we can test the server with 127.0.0.1/8000  or localhost/8000
+
+# Creating a Blank App
+Django uses apps and projects to keep code clean and easy and read. Multiple apps can be part of same Django project.
+Each app will have a set of functions to control. For example, an e-commerce site, you may use on app to login users, another to handle payments, and another to list item details. That's three different apps that are all part of the same main project.
+
+command - python manage.py startapp <app name>
 
 
